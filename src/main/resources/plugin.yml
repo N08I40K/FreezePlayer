@@ -1,0 +1,25 @@
+name: FreezePlayer
+version: '${project.version}'
+main: ru.n08i40k.freezeplayer.FreezePlayer
+api-version: 1.17
+authors: [ N08I40K ]
+
+commands:
+  freeze:
+    description: Freezes the player.
+    permission: freeze.freeze
+  unfreeze:
+    description: Unfreezes the player.
+    permission: freeze.unfreeze
+
+permissions:
+  freeze.*:
+    description: Access to all commands.
+    default: op
+    children:
+      freeze.freeze: true
+      freeze.unfreeze: true
+  freeze.freeze:
+    description: Accessing the /freeze command
+  freeze.unfreeze:
+    description: Accessing the /unfreeze command
